@@ -8,11 +8,13 @@ const {
 } = require("../../lib/notes");
 const { notes } = require("../../db/db");
 
+// Displays the api file that contains note entries
 router.get("/notes", (req, res) => {
     let results = notes;
     res.json(results);
 });
 
+// Shows the note matching a specific id
 router.get("/notes/:id", (req, res) => {
     const result = findById(req.params.id, notes);
     if(result) {
@@ -22,6 +24,7 @@ router.get("/notes/:id", (req, res) => {
     }
 });
 
+// Creates a new note and saves it
 router.post("/notes", (req, res) => {
     req.body.id = notes.length.toString();
 
@@ -33,6 +36,7 @@ router.post("/notes", (req, res) => {
     }
 });
 
+// Deletes a note from the json file after the user clicks the delete button
 router.delete("/notes/:id", (req, res) => {
     for (let i = 0; i < notes.length; i++) {
         if (notes[i].id === req.params.id) {
@@ -44,7 +48,6 @@ router.delete("/notes/:id", (req, res) => {
         JSON.stringify(notes, null, 2)
     );
     res.json(notes);
-})
-
+});
 
 module.exports = router;
