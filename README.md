@@ -35,8 +35,6 @@
   ![evening-journey-94806 herokuapp com_notes](https://user-images.githubusercontent.com/78315917/171049361-6ca4deb4-c559-4943-8f56-0d04f254fe7b.png)
 
   
-  GitHub Page: https://luimr88.github.io/note-taker/
-  
   Heroku Page: https://evening-journey-94806.herokuapp.com/
 
   ## GitHub Repository
